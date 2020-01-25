@@ -1,0 +1,13 @@
+Install Ansible on Redhat
+wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+rpm -ivh epel-release-latest-7.noarch.rpm
+yum repolist
+yum — enablerepo=epel install ansible
+Install Ansible on AWSLinux
+vim /etc/yum.repos.d/epel.repo
+or
+sudo yum-config-manager --enable epel
+yum repolist ( you should see epel)
+yum install ansible
+Create an entry for all servers in etc/hosts file as shown below
+vim etc/hosts
