@@ -35,7 +35,7 @@
      become: ture
 
      tasks:
-     - name: creating docker image using docker command
+     - name: creating docker container using docker command
        command: docker run -d --name simple-devops-container -p 8080:8080 simple-devops-image
    ```
 
@@ -80,6 +80,8 @@ Enable connection between Ansible-control-node and Jenkins
 	       - Remote directory: `//opt//docker`
 	       - Exec command: 
                 ```sh 
+		 for cecking use --check option
+		 ansible-playbook -i hosts create-docker-image.yml --check
                 ansible-playbook -i /opt/docker/hosts /opt/docker/create-docker-image.yml;
                 ```
 
